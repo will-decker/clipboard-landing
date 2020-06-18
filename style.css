@@ -55,12 +55,13 @@ img {
 
 .flex {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
 
 .even-spacing > * {
   flex: 1;
+  padding: 10px;
 }
 
 .btn {
@@ -91,12 +92,30 @@ header p {
 
 .btn-green {
   background-color: var(--strong-cyan);
-  box-shadow: 0 4px hsl(171, 68%, 36%);
+  box-shadow: 0 4px hsl(171, 68%, 36%),
+    -1px 9px 40px -3px rgba(38, 188, 165, 0.68);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-green:hover {
+  background-color: #5dcdbb;
+  box-shadow: 0 4px hsl(171, 29%, 49%),
+    -1px 3px 20px -3px rgba(38, 188, 165, 0.68);
 }
 
 .btn-purple {
   background-color: var(--light-blue);
-  box-shadow: 0 4px hsl(233, 71%, 61%);
+  box-shadow: 0 4px hsl(233, 71%, 61%),
+    -1px 9px 40px -3px rgba(97, 116, 255, 0.68);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-purple:hover {
+  background-color: #8897ff;
+  box-shadow: 0 4px hsl(233, 70%, 65%),
+    -1px 3px 20px -3px rgba(97, 116, 255, 0.68);
 }
 
 .snippets-title p {
@@ -176,6 +195,7 @@ footer img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 35px;
 }
 
 footer ul li {
@@ -185,6 +205,12 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: var(--dark-grayish-blue);
+}
+
+footer ul li a:hover {
+  color: #27bea7;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
 }
 
 footer .info-links {
@@ -207,6 +233,145 @@ footer .social-links a {
   font-size: 30px;
 }
 
+footer .social-links a:hover {
+  color: #27bea7;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
 footer .social-links a + a {
   margin-left: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  main {
+    padding: 0 25px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+    margin: 0 25px 20px;
+  }
+
+  header p {
+    font-size: 17px;
+    margin: 0 25px 30px;
+  }
+
+  header .btn-container {
+    margin: 0 25px;
+  }
+
+  .flex {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .flex div + div {
+    margin-top: 60px;
+  }
+
+  .snippets-wrapper {
+    flex-direction: column;
+  }
+
+  .snippets-wrapper .computer {
+    margin-left: 0;
+  }
+
+  .snippets-features {
+    padding-top: 80px;
+    margin-left: 0;
+    text-align: center;
+    width: 60%;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .workflow-tools {
+    width: 60%;
+  }
+
+  .corporate-logos {
+    padding: 145px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 0 25px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+    margin: 0 25px 20px;
+  }
+
+  header p {
+    font-size: 17px;
+    margin: 0 25px;
+  }
+
+  header .btn-container {
+    margin: 0 25px;
+  }
+
+  .flex {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .flex div + div {
+    margin-top: 60px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .snippets-wrapper {
+    flex-direction: column;
+  }
+
+  .snippets-wrapper .computer {
+    margin-left: 0;
+  }
+
+  .snippets-features {
+    padding-top: 50px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .corporate-logos {
+    padding: 145px 0;
+  }
+
+  .flex-footer {
+    flex-direction: column;
+    padding: 25px 0;
+  }
+
+  .flex-footer .info-links {
+    align-items: center;
+    height: 100%;
+  }
+
+  .info-links li + li {
+    margin-top: 30px;
+  }
 }
